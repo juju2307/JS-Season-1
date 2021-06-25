@@ -29,6 +29,20 @@
         "tangent",
         "arboré",
     ]);
+    document.getElementById("run").addEventListener("click", function() {
+   let rrace = Math.floor(Math.random() * birds.length);
+   let race = birds[rrace];
+   let items = Array.from(adjectives);
+   let radj = Math.floor(Math.random() * items.length);
+   let adj = items[radj];
 
-    // your code here
+   if (race.fem == true) {
+       adj += "e";
+      alert(document.getElementById("target").innerHTML = "La"+ " " + race.name + " " + adj);
+   }
+   else{
+       alert(document.getElementById("target").innerHTML = "Le" + " " + race.name + " " + adj);
+   }
+    });
+ 
 })();

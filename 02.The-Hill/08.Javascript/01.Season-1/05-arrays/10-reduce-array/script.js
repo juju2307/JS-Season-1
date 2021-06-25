@@ -80,7 +80,13 @@
             age: 81,
         },
     ];
+    document.getElementById("run").addEventListener("click", function() {
+    let somme = people.reduce(function(accumulator, currentValue) {
+        return accumulator + currentValue.age;
+    },0);
+    alert(somme);
+    });
 
-    // your code here
+
 
 })();

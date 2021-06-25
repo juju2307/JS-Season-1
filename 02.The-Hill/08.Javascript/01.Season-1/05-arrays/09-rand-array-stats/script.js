@@ -9,7 +9,16 @@
       }
       numbers.forEach(function(item, index) {
           document.getElementById("n-" + (index +1)).innerHTML = item;
-      })
-        
+      });
+      let minimum = Math.min(...numbers);
+      document.getElementById("min").innerHTML = minimum;
+      let maximum = Math.max(...numbers);
+      document.getElementById("max").innerHTML = maximum;
+      let somme = numbers.reduce(function (accumulator, currentValue) {
+          return accumulator + currentValue
+      }, 0);
+      document.getElementById("sum").innerHTML = somme;
+        let moyenne = somme / numbers.length;
+        document.getElementById("average").innerHTML = moyenne;
     });
 })();
