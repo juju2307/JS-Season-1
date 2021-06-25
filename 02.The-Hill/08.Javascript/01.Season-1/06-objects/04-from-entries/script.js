@@ -2,7 +2,11 @@
 
 
 (() => {
-    const keys = ["name", "species", "age", "gender", "color"];
-    const values = ["Skitty", "cat", 9, "female", "tabby"];
-    // your code here
+    let keys = ["name", "species", "age", "gender", "color"];
+    let values = ["Skitty", "cat", 9, "female", "tabby"];
+    document.getElementById("run").addEventListener("click", () => {
+      let obj = {};
+      keys.forEach((key, i) => obj[key] = values[i]);
+         console.log(obj);
+    })
 })();
